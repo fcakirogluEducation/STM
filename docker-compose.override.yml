@@ -4,44 +4,14 @@ services:
   stmmicroservice1.api:
     environment:
      - ASPNETCORE_HTTP_PORTS=8080 #- ASPNETCORE_URLS=https://+:443;http://+:80
-     - ASPNETCORE_HTTPS_PORTS=8081
-     - ASPNETCORE_Kestrel__Certificates__Default__Password=Password12*
-     - ASPNETCORE_Kestrel__Certificates__Default__Path=/stm_certificates/stmcertificate.pfx
     ports:
      - 5000:8080
-     - 5001:8081
-    volumes:
-     - C:/stm_certificates:/stm_certificates
 
   stmmicroservice2.api:
     environment:
      - ASPNETCORE_HTTP_PORTS=8080
-     - ASPNETCORE_HTTPS_PORTS=8081
-     - ASPNETCORE_Kestrel__Certificates__Default__Password=Password12*
-     - ASPNETCORE_Kestrel__Certificates__Default__Path=/stm_certificates/stmcertificate.pfx  
     ports:
      - 5010:8080
-     - 5011:8081
-    volumes:
-     - C:/stm_certificates:/stm_certificates
+ 
 
   
-
-
-
-
-
-# version: '3.4'
-
-# services:
-#   stmmicroservice1.api:
-#     environment:
-#       - ASPNETCORE_ENVIRONMENT=Development
-#       - ASPNETCORE_HTTP_PORTS=8080
-#       - ASPNETCORE_HTTPS_PORTS=8081
-#     ports:
-#       - "8080"
-#       - "8081"
-#     volumes:
-#       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
-#       - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
