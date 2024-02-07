@@ -3,7 +3,8 @@ version: '3.4'
 services:
   stmmicroservice1.api:
     environment:
-     - ASPNETCORE_HTTP_PORTS=8080 #- ASPNETCORE_URLS=https://+:443;http://+:80
+     - ASPNETCORE_HTTP_PORTS=8080
+     - MicroservicesUrl:Micro2=http://stmmicroservice2.api:8080
     ports:
      - 5000:8080
 

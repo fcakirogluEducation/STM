@@ -6,9 +6,21 @@ services:
     build:
       context: .
       dockerfile: Micro1/Dockerfile
-
   stmmicroservice2.api:
     image: micro2
     build:
       context: .
       dockerfile: Micro2/Dockerfile
+  sqlserver-db:
+   image: mcr.microsoft.com/mssql/server:2022-latest
+   ports:
+    - 1433:1433 
+   environment:
+    SA_PASSWORD: "Your_password123"
+    ACCEPT_EULA: "Y"
+   volumes:
+    - sql_db:/var/opt/mssql
+volumes:
+ sql_db:
+   
+  
