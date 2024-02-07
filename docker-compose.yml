@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  stmmicroservice1.api:
+    image: stmmicroservice1api
+    build:
+      context: .
+      dockerfile: STMMicroservice1.API/Dockerfile
+
+  stmmicroservice2.api:
+    image: stmmicroservice2api
+    build:
+      context: .
+      dockerfile: STMMicroservice2.API/Dockerfile

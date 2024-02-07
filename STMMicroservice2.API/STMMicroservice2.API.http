@@ -1,0 +1,6 @@
+@STMMicroservice2.API_HostAddress = http://localhost:5172
+
+GET {{STMMicroservice2.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
