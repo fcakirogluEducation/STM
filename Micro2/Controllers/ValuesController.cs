@@ -10,6 +10,7 @@ namespace Micro2.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            throw new Exception("hata var");
             return Ok("Micro2");
         }
     }

@@ -5,6 +5,7 @@ services:
     environment:
      - ASPNETCORE_HTTP_PORTS=8080
      - MicroservicesUrl:Micro2=http://stmmicroservice2.api:8080
+     - ConnectionStrings:SqlServer=${SqlServerEnv}
     ports:
      - 5000:8080
 

@@ -11,6 +11,8 @@ services:
     build:
       context: .
       dockerfile: Micro2/Dockerfile
+    depends_on :
+     - sqlserver-db
   sqlserver-db:
    image: mcr.microsoft.com/mssql/server:2022-latest
    ports:
